@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#6d4ccf" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Quick Notes" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="app-icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="app-icon.svg" />
+    <title>Quick Notes | About</title>
+    <script src="about.js" defer></script>
+    <script src="pwa.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="index-header">
+      <h1 class="page-title">Quick Notes</h1>
+      <p class="sub-heading">A simple place to keep your best ideas.</p>
+
+      <nav class="navigation-tab" aria-label="Main navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item"><a class="navigation-link" href="index.html">Home</a></li>
+          <li class="navigation-item"><a class="navigation-link" href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="about-layout">
+      <section class="page-sections">
+        <h2 class="section-heading">About Quick Notes</h2>
+        <p class="about-intro">
+          Quick Notes gives you a calm, uncomplicated place to collect ideas before they slip away.
+          Add a thought from the home page and it is saved in this browser, ready for you to revisit
+          the next time you open the app on this device.
+        </p>
+
+        <h3 class="section-heading">Made for quick thinking</h3>
+        <ul class="about-list">
+          <li><strong>Capture quickly:</strong> Add a note with just a few words and keep your momentum.</li>
+          <li><strong>Keep your list close:</strong> Notes are stored locally in your browser, not on a Quick Notes account.</li>
+          <li><strong>Stay in control:</strong> Review or remove notes whenever you like from the home page.</li>
+        </ul>
+        <p class="about-intro">
+          Notes are stored on the device and browser where you create them. They are not automatically
+          synced to other devices, so avoid entering confidential information.
+        </p>
+      </section>
+
+      <section class="page-sections install-section" aria-labelledby="install-heading">
+        <h2 id="install-heading" class="section-heading">Use Quick Notes as an app</h2>
+        <p class="about-intro">
+          Install Quick Notes on your device for a home-screen shortcut and a focused, app-like
+          experience. The website remains available in your browser too.
+        </p>
+        <button id="install-app-button" class="note-button install-button" type="button">
+          Install Quick Notes
+        </button>
+        <p id="install-status" class="form-status" role="status" aria-live="polite">
+          Android: use the install button or your browser's Install app option.
+          iPhone and iPad: open this page in Safari, tap Share, then choose Add to Home Screen.
+        </p>
+        <p class="form-note">
+          Quick Notes is a web app and is not currently listed in the Apple App Store or Google Play.
+          App installation and offline support require serving this site over HTTPS.
+        </p>
+      </section>
+
+      <section class="page-sections" aria-labelledby="feedback-heading">
+        <h2 id="feedback-heading" class="section-heading">Share your feedback</h2>
+        <p class="about-intro">
+          Have an idea, found something confusing, or want to tell us what is working well?
+          Send us a message directly from this page. Your email address is included so we can reply.
+        </p>
+
+        <form
+          id="feedback-form"
+          class="feedback-form"
+          action="https://formsubmit.co/ajax/davidbritonooko@gmail.com"
+          method="post"
+        >
+          <input type="hidden" name="_subject" value="Quick Notes feedback" />
+          <input type="hidden" name="_template" value="table" />
+          <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" hidden />
+
+          <div class="form-field">
+            <label for="feedback-name">Your name</label>
+            <input id="feedback-name" name="name" type="text" autocomplete="name" maxlength="100" required />
+          </div>
+
+          <div class="form-field">
+            <label for="feedback-email">Your email</label>
+            <input id="feedback-email" name="email" type="email" autocomplete="email" maxlength="254" required />
+          </div>
+
+          <div class="form-field">
+            <label for="feedback-topic">Feedback topic</label>
+            <select id="feedback-topic" name="topic" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option value="Suggestion">Suggestion</option>
+              <option value="Issue">Report an issue</option>
+              <option value="General feedback">General feedback</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="feedback-message">Your feedback</label>
+            <textarea id="feedback-message" name="message" rows="6" maxlength="3000" required></textarea>
+          </div>
+
+          <button class="note-button feedback-submit" type="submit">Send feedback</button>
+          <p id="feedback-status" class="form-status" role="status" aria-live="polite"></p>
+          <p class="form-note">Your feedback is sent securely through FormSubmit. On the first submission, check your inbox to activate delivery.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="index-footer">
+      <p class="footer-note">&copy; 2026 Quick Notes. Capturing the idea while it's fresh.</p>
+    </footer>
+  </body>
+</html>

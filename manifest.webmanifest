@@ -1,0 +1,19 @@
+{
+  "id": "./index.html",
+  "name": "Quick Notes",
+  "short_name": "Quick Notes",
+  "description": "Capture and keep your ideas in a simple, private notes app.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f3ff",
+  "theme_color": "#6d4ccf",
+  "icons": [
+    {
+      "src": "app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

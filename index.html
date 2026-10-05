@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#6d4ccf" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Quick Notes" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="app-icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="app-icon.svg" />
+    <title>Quick Notes | Home</title>
+    <script src="script.js" defer></script>
+    <script src="pwa.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="index-header">
+      <h1 class="page-title">Quick Notes</h1>
+      <p class="sub-heading">Capturing the idea while it's still fresh.</p>
+
+      <nav class="navigation-tab" aria-label="Main navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item"><a class="navigation-link" href="index.html">Home</a></li>
+          <li class="navigation-item"><a class="navigation-link" href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="index-main">
+      <section class="page-sections">
+        <h2 class="section-heading">Capture the idea on time.</h2>
+
+        <form id="note-form" class="note-form">
+          <label for="note-input">New note:</label>
+          <input type="text" id="note-input" name="note-input" placeholder="Type your note here" />
+          <button class="note-button" type="submit">Add Note</button>
+        </form>
+      </section>
+
+      <section class="page-sections" aria-live="polite">
+        <h3 id="notes-count" class="section-heading">You have no notes saved yet.</h3>
+        <ul id="note-list"></ul>
+      </section>
+    </main>
+
+    <footer class="index-footer">
+      <p class="footer-note">&copy; 2026 Quick Notes. Capturing the idea while it's fresh.</p>
+    </footer>
+  </body>
+</html>
